@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reuniones</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container-fluid"> <!-- Pone el nav horizontal -->
+
+                <a class="navbar-brand" href="../index.html"> 
+                    Poject
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <!-- Menu amburguesa visible -->
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- Colapsa la informacion en dispositivos más chicos -->
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Home</a> <!-- index -->
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./crear-reunion.html">Crear reunión</a> <!-- crear-reunion -->
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./mis-reuniones.html">Mis reuniones</a> <!-- mis-reuniones -->
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Reuniones</a> <!-- reuniones -->
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar reunión" aria-label="Search">
+
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+
+                </div>
+            </div>
+
+            </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <h1>Mis reuniones</h1>
+
+            <div class="filtros"> <!-- filtros -->
+                
+                <select class="form-select" aria-label="Default select example" id="tematica" required>
+                        <option selected>Tematica</option>
+                        <option value="1">Salida casual</option>
+                        <option value="2">Charla</option>
+                        <option value="3">Tematica específica</option>
+                </select>
+                <input type="number" id="capacidad" name="capacidad" min="3" max="20" step="1" value="3">
+            </div>
+
+            <div class="card-tipica card-1"> <!-- card 1 -->
+                <section>
+                    <img src="../img/Caminata-Mate.jpg" alt="Salida a tomar Mate">
+
+                    <div>
+                        <h6>Salida a tomar Mate</h6>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, tempore doloribus nostrum nesciunt.</p>
+                        <p>X personas participaran</p>
+                        <div class="botones">
+                            <button class="estilo-boton">Ver más</button>
+                        </div>
+                    </div>
+                    
+                    
+
+                    <div class="card-perfil mini-perfil">
+                        <div class="pfp-card">
+                            <img src="../img/user-pfp-1.jfif" alt="Foto de perfil">
+                            <p>Usuario 1</p>
+                        </div>
+                        <div class="info-card">
+                            <p>dd/mm/yy hh AM/PM</p>
+                            <p>Ubicacion apróx.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="card-tipica card-2"> <!-- card 2 -->
+                <section>
+                    <img src="../img/Reunion-Estudio.jpg" alt="Sesión de estudio">
+
+                    <div>
+                        <h6>Sesión de estudio</h6>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, tempore doloribus nostrum nesciunt.</p>
+                        <p>X personas participaran</p>
+                        <div class="botones">
+                            <button class="estilo-boton">Ver más</button>
+                        </div>
+                    </div>
+                    
+                    
+
+                    <div class="card-perfil mini-perfil">
+                        <div class="pfp-card">
+                            <img src="../img/user-pfp-2.jfif" alt="Foto de perfil">
+                            <p>Usuario 2</p>
+                        </div>
+                        <div class="info-card">
+                            <p>dd/mm/yy hh AM/PM</p>
+                            <p>Ubicacion exacta</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="card-tipica card-3"> <!-- card 3 -->
+                <section>
+                    <img src="../img/Salida-Rambla.jpg" alt="Caminata por la rambla">
+
+                    <div>
+                        <h6>Caminata por la rambla</h6>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, tempore doloribus nostrum nesciunt.</p>
+                        <p>X personas participaran</p>
+                        <div class="botones">
+                            <button class="estilo-boton">Ver más</button>
+                        </div>
+                    </div>
+                    
+                    
+
+                    <div class="card-perfil mini-perfil">
+                        <div class="pfp-card">
+                            <img src="../img/user-pfp-3.jfif" alt="Foto de perfil">
+                            <p>Usuario 3</p>
+                        </div>
+                        <div class="info-card">
+                            <p>dd/mm/yy hh AM/PM</p>
+                            <p>Ubicacion exacta</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="botones">
+                <button class="estilo-boton">Anterior</button>
+                <div class="paginacion"> <!-- paginacion -->
+                    <p>&lt; 1/3 &gt;</p>
+                </div>
+                <button class="estilo-boton">Siguiente</button>
+            </div>
+            
+
+        </section>
+    </main>
+
+    <footer>
+        <section class="aliniado-izquierda"> <!-- Links e informacion -->
+            <div>
+                <h6>Información</h6>
+                <a href="./sobre-nosotros.html">Sobre nosotros</a>
+                <a href="./crear-reunion.html">Crear reunión</a>
+            </div>
+
+            <div>
+                <h6>Datos</h6>
+                <a href="#">Mi perfil</a>
+                <a href="#">Reuniones</a>
+            </div>
+        </section>
+
+        <section class="aliniado-derecha"> <!-- About -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quam exercitationem ratione dolorem! Delectus cupiditate modi nihil iusto. Animi quaerat nesciunt nisi non voluptatem nulla et! Modi corrupti beatae amet?</p>
+        </section>
+
+        <section class="aliniado-izquierda"> <!-- Creditos -->
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam sed qui voluptatem modi dolorum quibusdam voluptates.</p>
+        </section>
+
+        <section class="aliniado-derecha"> <!-- Reddes sociales -->
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">WhatsApp</a>
+        </section>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva reunión</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container-fluid"> <!-- Pone el nav horizontal -->
+
+                <a class="navbar-brand" href="../index.html"> 
+                    Poject
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <!-- Menu amburguesa visible -->
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- Colapsa la informacion en dispositivos más chicos -->
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Home</a> <!-- index -->
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Crear reunión</a> <!-- crear-reunion -->
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./mis-reuniones.html">Mis reuniones</a> <!-- mis-reuniones -->
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./reuniones.html">Reuniones</a> <!-- reuniones -->
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar reunión" aria-label="Search">
+
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+
+                </div>
+            </div>
+
+            </nav>
+
+    </header>
+
+    <main>
+        <h1>Nueva reunión</h1>
+
+        <section> <!-- Formulario -->
+            <form>
+                <section>
+                    <fieldset class="titulo-reunion"> <!-- Titulo -->
+                        <label for="titulo">Titulo</label>
+                        <input type="text" name="Titulo" id="titulo" placeholder="Ejemplo: Caminata por la rambla" required>
+                    </fieldset> <!-- pronto -->
+                    
+                    <fieldset class="ubicacion-reunion"> <!-- ubicacion -->
+                        <h6>Añadir Ubicacion</h6>
+                        <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.9773436844443!2d-56.202372624926326!3d-34.90701807357827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f802b0e1d1f07%3A0x7d9cac3abf570af3!2sPl.%20Independencia%2C%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses-419!2suy!4v1768789565016!5m2!1ses-419!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </fieldset> <!-- pronto -->
+    
+                    <fieldset class="personas-reunion"> <!-- owners -->
+                    <label for="owners">Personas a cargo</label>
+                    <p style="font-size: smaller;">*Solo puedes seleccionar a amigos</p>
+    
+                    <select class="form-select" aria-label="Default select example" id="owners" required>
+                        <option selected>Añadir amigo</option>
+                        <option value="1">Amigo1</option>
+                        <option value="2">Amigo2</option>
+                        <option value="3">Amigo3</option>
+                    </select>
+    
+                    <section class="perfil-tipo-card"> <!-- Card owners -->
+                        <div class="card-perfil">
+                            <div class="pfp-card">
+                                <img src="../img/user-pfp-1.jfif" alt="Foto de perfil">
+                                <p>Tú</p>
+                            </div>
+                            
+                            <div class="calif"> <!-- Valoración de perfil -->
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                <p>12</p>
+                            </div>
+                        
+                        </div>
+    
+                        <div class="card-perfil">
+                            <div class="pfp-card">
+                                <img src="../img/user-pfp-2.jfif" alt="Foto de perfil">
+                                <p>Amigo1</p>
+                            </div>
+    
+                            <div class="calif"> <!-- Valoración de perfil -->
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <p>21</p>
+                            </div>
+                        </div>
+    
+                    </section>
+                    </fieldset> <!-- pronto -->
+    
+                    <fieldset class="galeria-reunion"> <!-- galería -->
+                        <label for="galeria">Galería</label>
+                        <div>
+                            <img src="../img/previa-cargar-imagenes.jfif" alt="Añadir imágenes a la galería">
+                            <p>Añadir imagen</p>
+                        </div>
+                    </fieldset> <!-- pronto -->
+                    
+                    <fieldset class="capacidad-reunion"> <!-- capacidad -->
+                        <label for="capacidad" class="form-label">Capacidad</label> <!-- bootstrap input range no me maten por el color del circulito xfa-->
+                        <input type="range" class="form-range" min="3" max="20" value="3" id="capacidad">
+                        <output for="capacidad" id="rangeValue" aria-hidden="true"></output>
+    
+                        <script>
+                        // This is an example script, please modify as needed
+                        const rangeInput = document.getElementById('capacidad');
+                        const rangeOutput = document.getElementById('rangeValue');
+    
+                        // Set initial value
+                        rangeOutput.textContent = rangeInput.value;
+    
+                        rangeInput.addEventListener('input', function() {
+                            rangeOutput.textContent = this.value;
+                        });
+                        </script>
+                    </fieldset> <!-- pronto -->
+
+                    <fieldset class="tema-reunion"> <!-- tematica -->
+                        <label for="tematica">Temática</label>
+    
+                        <select class="form-select" aria-label="Default select example" id="tematica" required>
+                            <option selected>Seleccionar</option>
+                            <option value="1">Salida casual</option>
+                            <option value="2">Charla</option>
+                            <option value="3">Tematica específica</option>
+                        </select>
+    
+                    </fieldset> <!-- pronto -->
+    
+                    <fieldset class="edad-reunion"> <!-- rango de edad -->
+                        <label for="rango-edad">Rango de edad</label>
+    
+                        <select class="form-select" aria-label="Default select example" id="rango-edad">
+                            <option selected>Seleccionar</option>
+                            <option value="1">Joven</option>
+                            <option value="2">Adulto joven</option>
+                            <option value="3">Adulto</option>
+                        </select>
+                    </fieldset> <!-- pronto -->
+                    
+                    <fieldset class="desc-reunion"> <!-- Descripcion -->
+                        <label for="descripcion">Descripción</label>
+    
+                        <textarea id="descripcion" name="descripcion" maxlength="245" placeholder="Hasta 245 carácteres..."></textarea>
+                    </fieldset> <!-- pronto -->
+    
+    
+                </section>
+
+                <fieldset class="calendar-reunion"> <!-- Calendario-->
+                    <h6>Fecha y hora</h6>
+                    <img src="../img/Calendar.jfif" alt="calendario">
+                </fieldset> <!-- pronto -->
+
+                <fieldset class="verify-reunion"> <!-- Verificacion -->
+                    <label for="notificacion"></label>
+                    <input type="checkbox" name="notificacion" id="notificacion">
+                    <label for="">Recibir notificaciones de este evento</label>
+
+                    <label for="terminos-condiciones"></label>
+                    <input type="checkbox" name="terminos-condiciones" id="terminos-condiciones" required>
+                    <label for="">He leído y acepto los términos y condiciones</label>
+
+                    <div>
+                        <p>*Se debe completar este campo <br>
+                        *Los creadores de este evento deben ser 2 o más</p>
+                    </div>
+                </fieldset> <!-- pronto, me peleo con el checckbox -->
+
+                <div class="botones"> <!-- Guardar/Enviar -->
+                    <button class="estilo-boton">Guardar borrador</button>
+                    <input type="submit" name="Crear" id="Crear" value="Crear" class="estilo-boton">
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <section class="aliniado-izquierda"> <!-- Links e informacion -->
+            <div>
+                <h6>Información</h6>
+                <a href="./sobre-nosotros.html">Sobre nosotros</a>
+                <a href="#">Crear reunión</a>
+            </div>
+
+            <div>
+                <h6>Datos</h6>
+                <a href="#">Mi perfil</a>
+                <a href="./mis-reuniones.html">Reuniones</a>
+            </div>
+        </section>
+
+        <section class="aliniado-derecha"> <!-- About -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quam exercitationem ratione dolorem! Delectus cupiditate modi nihil iusto. Animi quaerat nesciunt nisi non voluptatem nulla et! Modi corrupti beatae amet?</p>
+        </section>
+
+        <section class="aliniado-izquierda"> <!-- Creditos -->
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam sed qui voluptatem modi dolorum quibusdam voluptates.</p>
+        </section>
+
+        <section class="aliniado-derecha"> <!-- Reddes sociales -->
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">WhatsApp</a>
+        </section>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/69724a2972.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
