@@ -339,4 +339,13 @@ footer section{
     align-items: start;
 }
 
+@media (max-width: 500px) {
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+    }
+}
+
 /* FIN DEL FOOTER */
