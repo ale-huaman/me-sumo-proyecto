@@ -1,0 +1,368 @@
+/* VARIABLES */
+
+/* Voy a usar bg para todo lo que sea color, utilizo OKLCH*/
+$bg-primario: oklch(42.72% 0.097 266.22); /* Header, Footer */
+$bg-secundario: oklch(99.34% 0.011 95.16); /* Fondo */
+$bg-interaccionables: oklch(93.36% 0.094 114.59);/* botones acentos */
+$bg-bordes: oklch(44.32% 0.065 285.70); /* Para bordes */
+$bg-text: oklch(20.02% 0.000 0); /* General de texto */
+$bg-importante: oklch(76.22% 0.093 265.22); /* Para destacar texto */
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------- */
+
+/* HEADER */ /* Utiliza Bootstrap */
+
+header nav{
+    background-color: $bg-primario;
+    min-height: 10vh;
+    font-size: 3;
+}
+
+/* FIN DEL HEADER */
+
+
+/* ----------------------------------- */
+
+
+/* MAIN */
+
+body{
+    background-color: $bg-secundario;
+    min-height: 100vh;
+}
+
+main h1, h3{
+    text-align: center;
+    margin: 4vh;
+}
+
+.css-flex{
+    margin: 5vh 2vw;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1;
+}
+
+main section img{
+    width: 100%;
+}
+
+.css-flex div{
+    padding: 1.5vw;
+}
+
+#carouselExampleCaptions div{
+    max-height: 70vh;
+}
+
+.estilo-boton{ /* estilo general para los botones */
+    text-decoration: none;
+    color: $bg-text;
+    padding: 1.5vh;
+    border: 1px solid;
+    width: 28vh;
+    text-align: center;
+    border-radius: 20px;
+    background-color: $bg-interaccionables;
+    width: 12em;
+    height: 3em;
+    border-radius: 20px;
+}
+
+.estilo-boton:hover{
+    background-color: $bg-interaccionables;
+}
+
+.carousel-inner div div{ /* color fondo texto carusel */
+    background-color: $bg-secundario;
+    color: $bg-text;
+}
+
+
+.botones{ /* posicionamiento general para los botones */
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+input{ /* Que se vea todo el contenido del placeholder */
+    width: 100%;
+}
+
+.css-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3;
+    margin: 3vw;
+    gap: 4vw;
+}
+
+.recomendacion{
+    font-size: x-small;
+    text-align: center;
+}
+
+/* hasta acá sobre index */
+
+.card-perfil img{
+    width: 3vw;
+}
+
+.perfil-tipo-card{
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: space-evenly;
+}
+
+.card-perfil{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1vw 1vw;
+    border: 1px solid rgb(128, 128, 128, 0.15);;
+    margin: 2vh 1vw;
+    border-radius: 20px;
+    background-color: $bg-secundario;
+}
+
+.pfp-card{
+    text-align: center;
+}
+
+.calif{
+    display: flex;
+    gap: 0.5vw;
+    font-size: smaller;
+}
+
+/* hasta acá sector de personas a cargo crear-reunion */
+
+textarea{
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    font-size: 16px;
+    overflow-y: scroll;
+}
+
+.galeria-reunion div{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+.galeria-reunion div img{
+    width: 10vw;
+}
+
+/* hasta acá sector galería y descripcion */
+
+iframe{
+    min-height: 8vh;
+    max-height: 15vh;
+    width: 100%;
+}
+
+.verify-reunion div{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    text-align: end;
+    font-size: smaller;
+}
+
+.calendar-reunion section{ /* calendario y verificacion al lado del otro */
+    display: flex;
+}
+
+.calendar-reunion img{
+    height: 45vh;
+    width: 90%;
+}
+
+
+form fieldset{
+    margin: 0 3vw;
+}
+
+form section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    margin: 0 3vw;
+}
+
+
+/* hasta acá crear-reunion */
+
+.mis-reuniones{
+    position: relative;
+}
+
+#boton-crear{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+#boton-crear a{
+    background-color: $bg-interaccionables;
+}
+
+/* hasta acá boton de crear dentro de mis-reuniones */
+
+.filtros{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    font-size: small;
+    margin: 20px 30px;
+    width: 30%;
+}
+
+.card-tipica{
+    background-color: $bg-secundario;
+    margin: 0 3vw;
+    border-radius: 20px;
+}
+
+
+.card-tipica section img{
+    width: 20%;
+    border-radius: 20px;
+}
+
+.card-tipica section{
+    display: flex;
+    gap: 20px;
+    margin: 3vw;
+}
+
+.paginacion{
+    text-align: center;
+    margin: 20px auto;
+}
+
+.mini-perfil{
+    width: 10vw;
+    height: 5rem;
+}
+
+.info-card{
+    font-size: x-small;
+    justify-content: end;
+    align-items: end;
+    text-align: end;
+    margin: 40px auto;
+    width: 100%;
+}
+
+section .botones{
+    margin: 0 3vw;
+}
+
+.card-1 section div h6::after{
+    content: " - Charla";
+}
+
+.card-2 section div h6::after{
+    content: " - Tematica específica";
+}
+
+.card-3 section div h6::after{
+    content: " - Salida casual";
+}
+
+@media (max-width: 500px) {
+    .card-tipica section img{
+    width: 33%;
+    border-radius: 20px;
+}
+}
+
+/* hasta acá reuniones y mis reuniones */
+
+.presentacion{
+    background-color: $bg-secundario;
+}
+
+.mision-vision, .thank{
+    margin: 5vh 3vw;
+}
+
+.thank img{
+    width: 20%;
+}
+
+.thank{
+    margin-top: 15vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+::selection{
+    background-color: $bg-importante;
+    color: $bg-text;
+}
+
+/* FIN DEL MAIN */
+
+
+/* ----------------------------------- */
+
+
+/* FOOTER */
+
+footer{
+    background-color: $bg-primario;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3vh 3vw;
+}
+
+footer section{
+    display: flex;
+    flex-direction: row;
+}
+
+.aliniado-derecha{
+    text-align: end;
+    gap: 3rem;
+    justify-content: end;
+    align-items: end;
+}
+
+.aliniado-izquierda{
+    text-align: start;
+    gap: 3rem;
+    justify-content: start;
+    align-items: start;
+}
+
+@media (max-width: 500px) {
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        font-size: smallerpush;
+    }
+}
+
+/* FIN DEL FOOTER */
