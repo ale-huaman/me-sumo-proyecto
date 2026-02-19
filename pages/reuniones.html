@@ -61,7 +61,8 @@
 
     <main>
         <section>
-            <h1>Mis reuniones</h1>
+            <h1>Reuniones disponibles</h1>
+            <p>Explorá todas las actividades creadas por la comunidad y sumate a la que más te interese.</p>
 
             <div class="filtros"> <!-- filtros -->
                 
@@ -71,7 +72,20 @@
                         <option value="2">Charla</option>
                         <option value="3">Tematica específica</option>
                 </select>
+
+                <p>Cantidad de personas</p>
                 <input type="number" id="capacidad" name="capacidad" min="3" max="20" step="1" value="3">
+
+                <label for="start">Fecha:</label>
+                <input
+                    type="date"
+                    id="start"
+                    name="trip-start"
+                    value="2026-02-16"
+                    min="2026-02-16"
+                    max="2026-12-31"
+                />
+                <button>Filtrar</button>
             </div>
 
             <div class="card-tipica card-1"> <!-- card 1 -->
@@ -80,8 +94,8 @@
 
                     <div>
                         <h6>Salida a tomar Mate</h6>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, tempore doloribus nostrum nesciunt.</p>
-                        <p>X personas participaran</p>
+                        <p>Una salida informal para conocer gente y compartir un buen rato.</p>
+                        <p>8 personas participaran</p>
                         <div class="botones">
                             <button class="estilo-boton">Ver más</button>
                         </div>
@@ -95,8 +109,8 @@
                             <p>Usuario 1</p>
                         </div>
                         <div class="info-card">
-                            <p>dd/mm/yy hh AM/PM</p>
-                            <p>Ubicacion apróx.</p>
+                            <p>2026-02-16 4PM</p>
+                            <p>📍 Parque / Rambla</p>
                         </div>
                     </div>
                 </section>
